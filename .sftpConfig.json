@@ -1,0 +1,24 @@
+{
+    "host": "kelownadesigns.com",
+    "port": 21,
+    "username": "cslowley123434",
+    "password": "Alex_2009_cs",
+    "protocol": "ftp",
+    "privateKeyPath": null,
+    "passphrase": null,
+    "passive": false,
+    "remotePath": "/public_html",
+    "uploadOnSave": false,
+    "syncMode": "update",
+    "watcher": {
+        "files": false,
+        "autoUpload": true,
+        "autoDelete": true
+    },
+    "ignore": [
+        "**/.vscode",
+        "**/.git",
+        "**/.DS_Store",
+        "**/.sftpConfig.json"
+    ]
+}

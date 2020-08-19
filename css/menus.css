@@ -1,0 +1,66 @@
+
+#mainmenubar {
+	background-color:lightseagreen;
+}
+
+#mainmenubar span {
+	text-align: left;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+#mainmenubar a {
+  color: lightgray;
+  font-size: 2em;
+  margin : auto;
+}
+
+.menuoptionsarea {
+	display: block;
+	position: absolute;
+	top:0px;
+	left:0px;
+	background-color: tan;
+  	border-radius: 3px;
+  	border-style: groove;
+  	border-width: 3px;
+  	border-color: lightblue;
+  	box-shadow: 3px 3px 3px GRAY;
+  	font-weight: bold;
+}
+
+.menuoptionsarea tr th {
+		font-size: 17pt;
+		color:white;
+		font-variant-caps: small-caps;
+		border: groove 2px gold;
+		text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
+}
+
+.menuoptionsarea tr td  {
+	background-color: lightblue;
+	display: block;
+	padding:2px;
+
+	border-bottom: solid thin black;
+}
+
+.menuoption {
+	color:blue;		
+	font-weight:bold;
+}
+
+
+.menuoptionsarea tr td a, .menuoptionsarea tr td a:link, .menuoptionsarea tr td a:visited {
+	text-decoration: none;
+	display: block;
+	color:blue;
+}
+
+.menuoptionsarea td:hover, .menuoptionsarea tr td a:hover {
+  color:RED;
+  text-shadow: 1px 1px 1px gray;
+  background-color: lightgray;	
+  border-color: white;		
+}
