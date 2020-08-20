@@ -6,7 +6,11 @@
 * @purpose Stores all the site settings
 */
 
+//For local development environment
 define("PUBLIC_FOLDER","/websites/KelownaDesigns.com-April2017/public_html/");
+
+//For remote production environment
+//define("PUBLIC_FOLDER","/public_html/");
 
 /*
 define("BASE_SETTINGS", [
