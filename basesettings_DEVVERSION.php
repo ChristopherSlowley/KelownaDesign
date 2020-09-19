@@ -11,14 +11,13 @@
 * For local development environment purposes only
 * Comment below before upload to webserver 
 *****************************************************************************/
-//define("PUBLIC_FOLDER","/websites/KelownaDesigns.com-April2017/public_html/");
+define("PUBLIC_FOLDER","/websites/KelownaDesigns.com-April2017/public_html/");
 
 /****************************************************************************
 * For remote production environment
 * Uncomment below before upload to webserver
 *****************************************************************************/
 //define("PUBLIC_FOLDER","/public_html/");
-define("PUBLIC_FOLDER","/");
 
 define("BASE_SETTINGS", [
     "ABSOLUTE_ROOT_LOCATION" =>  $_SERVER['DOCUMENT_ROOT'].PUBLIC_FOLDER,

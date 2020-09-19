@@ -74,7 +74,7 @@
             var theLink =    menuOptionsArray[idx].menuLink;
             var menuId =     menuOptionsArray[idx].menuId;
             var hasSubMenu = menuOptionsArray[idx].hasSubMenu;
-         //          $subMenuArea.append("<tr><td class='menuoption' onmouseover='getSubmenuFor(" + menuId + "," + hasSubMenu + ")'><a href='"+ theLink + "' >" + menuOptionsArray[idx].menuName + "</a></td></tr>");
+         // $subMenuArea.append("<tr><td class='menuoption' onmouseover='getSubmenuFor(" + menuId + "," + hasSubMenu + ")'><a href='"+ theLink + "' >" + menuOptionsArray[idx].menuName + "</a></td></tr>");
             $subMenuArea.append("<tr><td class='menuoption' onmouseover=''><a href='"+ theLink + "' >" + menuOptionsArray[idx].menuName + "</a></td></tr>");
          }
          $subMenuDIV.show(500);
@@ -92,7 +92,7 @@
 function createPopupMenu(menuOptionsObjArray, xPos, yPos, menuId, menuTitle) {
     var menuArea;
 
-    $("#"+menuId).remove(); //remove previous intance of the popomenu from the document
+    $("#"+menuId).remove(); //remove previous instance of the popomenu from the document
 
     //set the defualt values for each incomming argument
     if(menuId === undefined || menuId === ""){
@@ -121,7 +121,7 @@ function createPopupMenu(menuOptionsObjArray, xPos, yPos, menuId, menuTitle) {
     });
   
         
-    //if there a menu title was specified then create a table header row with specified title
+    //if a menu title was specified then create a table header row with specified title
     if( !(menuTitle === undefined || menuTitle === "")){
       var $menuOptionsTableRow = $("<tr>");
       var $newHeader = $("<th>").html(menuTitle);
