@@ -45,3 +45,13 @@ a {
   color: #3282e6;
   text-decoration: none;
 }
+
+.importantNumber {
+	color: RED;	
+	font-family: monospace;
+	font-style: italic;
+}
+
+#left-sidebar {
+	background-color: lightblue;
+}

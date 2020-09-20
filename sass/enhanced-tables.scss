@@ -1,0 +1,58 @@
+.enhancedTable_type1
+{
+    box-shadow: 3px 3px 3px gold;
+    font-size: 12pt;
+    
+    td {
+        background-color: tan;
+        border: 2px groove yellow;
+        padding-left: 5px;
+        padding-right: 5px; 
+    }
+
+    th,  th:hover {
+        background-color: yellowgreen;
+        color:black;
+        opacity: 1;
+    }
+
+    tr:hover, td:hover {
+        background-color: LIGHTGREEN;	
+        color: red;
+        font: Times;
+        opacity: 0.90;
+        text-shadow: 1px 1px skyblue;
+    }   
+}
+
+.enhancedTable_type2
+{
+	box-shadow: 3px 3px 3px lightgray;
+	font-size: 14pt;
+
+    td {
+        background-color:cornsilk;
+        border: 2px groove yellow;
+        padding-left: 5px;
+        padding-right: 5px; 
+    }
+
+    th, th:hover {
+        background-color: olive;
+        color:black;
+        opacity: 1;
+    }
+
+    tr:hover, td:hover {
+        background-color: LIGHTBLUE;	
+        color: red;
+        font: Times;
+        opacity: 0.90;
+        text-shadow: 1px 1px skyblue;
+    }    
+}
+
+
+
+
+

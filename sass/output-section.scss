@@ -1,0 +1,21 @@
+.outputSection
+{
+	background-color: aliceblue;	
+	border-width:5px;
+	border-style:ridge;
+	border-color:slategray; 
+	box-sizing:border-box;
+	box-shadow: 2px 2px lightpink;
+	padding: 5px;
+
+	header {
+		background-color: lightcoral;
+		border-style: dotted;
+		border-color: pink;
+		font-size: 18pt;
+		font-family:cursive;
+		margin: 4px;
+		text-align: center;
+		text-shadow: 1px 1px lightgray;
+	}
+}

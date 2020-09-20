@@ -17,7 +17,6 @@
 * For remote production environment
 * Uncomment below before upload to webserver
 *****************************************************************************/
-//define("PUBLIC_FOLDER","/public_html/");
 define("PUBLIC_FOLDER","/");
 
 define("BASE_SETTINGS", [
@@ -36,5 +35,11 @@ define("BASE_LOCATIONS", [
     "PHP_SEGMENTS" =>  BASE_SETTINGS['ABSOLUTE_ROOT_LOCATION']."php/segments/",
     "PHP_SCRIPTS" => BASE_SETTINGS['ABSOLUTE_ROOT_LOCATION']."php/scripts/",
     "PHP_DATA_SCRIPTS" => BASE_SETTINGS['ABSOLUTE_ROOT_LOCATION']."php/scripts/data/"
+]);
+
+define("PAGE_SEGMENTS",[
+		"PAGE_HEADER" => BASE_LOCATIONS['PHP_SEGMENTS']."page_header.php",
+		"MENU_BAR" => BASE_LOCATIONS['PHP_SEGMENTS']."menu_bar.php",
+		"PAGE_FOOTER" => BASE_LOCATIONS['PHP_SEGMENTS']."page_footer.php"
 ]);
 ?>

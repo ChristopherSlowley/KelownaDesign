@@ -2,7 +2,7 @@
    require_once BASE_SETTINGS['ABSOLUTE_ROOT_LOCATION']."php/scripts/sitesettings.php";
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
    <title> <?php  echo GENERAL_SETTINGS['SITE_TITLE']?></title>
    <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -13,7 +13,7 @@
    <link type="text/css" href= <?php echo (BASE_URLS['CSS']."layout-styles.css"); ?> rel="stylesheet">
    <link type="text/css" href= <?php echo (BASE_URLS['CSS']."main-style.css"); ?> rel="stylesheet">
    <link type="text/css" href= <?php echo (BASE_URLS['CSS']."menus.css"); ?> rel="stylesheet">
-   <link type="text/css" href= <?php echo (BASE_URLS['CSS']."numbers-tables.css"); ?> rel="stylesheet">
+   <link type="text/css" href= <?php echo (BASE_URLS['CSS']."enhanced-tables.css"); ?> rel="stylesheet">
    <link type="text/css" href= <?php echo (BASE_URLS['CSS']."output-sections.css"); ?> rel="stylesheet">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
