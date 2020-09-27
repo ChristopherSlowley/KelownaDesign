@@ -3,6 +3,7 @@
 /**
 * @author Christopher E. Slowley
 * @date June 25, 2017
+* @updated September 19, 2020
 * @purpose Stores all the site settings
 */
 
@@ -25,9 +26,9 @@ define("SITE_URLS", [
 ]);
 
 define ( "GENERAL_SETTINGS", [
-    "RELEASE_VERSION" => "1.2",
+    "RELEASE_VERSION" => "1.3",
     "SITE_TITLE" => "Kelowna Designs Concept Site",
-    "COPYRIGHT_INFORMATION" => "Copyright @ 2017 ChrisSoft Ltd.",
+    "COPYRIGHT_INFORMATION" => "Copyright @ 2020 ChrisSoft Ltd.",
     "WEB_MASTER" => "Christpher Evan Slowley",
     "WEB_MASTER_EMAIL" => "christopherslowley@gmail.com",
     "WEB_MASTER_ADDRESS" => "104-1680 Burtch Road, Kelowna BC, V1Y 9K7, Canada"

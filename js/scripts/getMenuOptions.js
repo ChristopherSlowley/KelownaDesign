@@ -22,7 +22,7 @@
    	if (jsonObjStr.includes("Error")) 
    	{
         	$mainMenuDIV.append("<span id='mainmenu>"+ jsonObjStr +"</span>");
-			alert("Error found " + jsonObjStr);
+			    alert("Error found " + jsonObjStr); //TODO: debugging
    	}
 		else
    	{
@@ -37,7 +37,7 @@
         		var hasSubMenu = menuOptionsArray[idx].hasSubMenu;
         		//TODO: CES put code (that Rob showed you to limit the number of times a\a javascript event is called)
         		//TODO: to prevent the item frombeing added to the memu more than once
-         	//TODO:Also there is a problem with the submenu option getting mixed up wiht each other's options
+         	  //TODO: Also there is a problem with the submenu option getting mixed up wiht each other's options
           	//TODO: need to findout what  is causing that to happen.
         		$mainMenuDIV.append("<span id='mainmenu"+ menuId +"' onmouseover='Menus.getSubmenuFor(" + menuId + "," + hasSubMenu + ")'><a href='"+ theLink + "' >" + menuOptionsArray[idx].menuName + "</a></span>");
       	}

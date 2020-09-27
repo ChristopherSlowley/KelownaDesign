@@ -16,32 +16,60 @@
 
 				<!-- First row of tiles  -->               
 				<div class="row">
-					<section class="col-sm-6 col-md-6 col-lg-6 outputSection">
-						<header><a target="new" href="http://www.backayaadshipping.com">Back-A-Yaad Freight Shipping</a></header>
-						<span>Shipping to the caribbean and beyond</span>
-						<br/>
-					</section>
-					<section class="col-sm-6 col-md-6 col-lg-6 outputSection"> 
-						<header><a target ="new" href="http://www.primerica.com/michelleslowleypollack">Michelle Slowley - Primerica Agent</a></header>
-						<span>Financial Needs Analysis, Term Life Insurance and Investments</span>
-						<br/>
-					</section>
-				</div>	     
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<section class="outputSection">
+							<header><a target="new" href="http://www.backayaadshipping.com">Back-A-Yaad Freight Shipping</a></header>
+							<span class="subtitle">Shipping to the caribbean and beyond</span>
+							<br/>
+						</section>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<section class="outputSection"> 
+							<header><a target="_blank" href="http://www.primerica.com/michelleslowleypollack">Michelle Slowley - Primerica Agent</a></header>
+							<span class="subtitle">Financial Needs Analysis, Term Life Insurance and Investments</span>
+							<br/>
+						</section>
+					</div>
+				</div><!-- end first row -->	     
 				        
 				<!-- Second Row of tiles -->
 				<div class="row">
-					<section class="col-sm-6 col-md-6 col-lg-6 outputSection">
-						<header><a target="new" href="/cpanel">Site Owner Log in</a></header>
-						<span>Control Panel</span>
-						<br/>
-					</section>
-					<section class="col-sm-6 col-md-6 col-lg-6 outputSection"> 
-						<header><a target ="new" href="/blog">Blog</a></header>
-						<span>Kelowna Design Blog</span>
-						<br/>
-					</section>
-				</div>	     
-            </div> <!-- End Main-Area div -->
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<section class="outputSection">
+							<header><a target="_blank" href="/cpanel">Site Owner Log in</a></header>
+							<span class="subtitle">Control Panel</span>
+							<br/>
+						</section>
+					</div>
+					<div  class="col-sm-6 col-md-6 col-lg-6">
+						<section class="outputSection"> 
+							<header><a target ="_blank" href="/blog">Blog</a></header>
+							<span class="subtitle">Kelowna Design Blog</span>
+							<br/>
+						</section>
+					</div>
+				</div> <!-- end second row -->	
+				
+				<!-- Third Row of tiles -->
+				<div class="row">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<section class="outputSection">
+							<header><a target="_blank" href="/JobHunter-Php/CreateNew_JobPosting.html">Job Hunter Project</a></header>
+							<span class="subtitle">Track potential job contacts</span>
+							<br/>
+						</section>
+					</div>
+					<div  class="col-sm-6 col-md-6 col-lg-6">
+						<section class="outputSection"> 
+							<header><a target ="_self" href="/index.php">Home</a></header>
+							<span class="subtitle">Kelowna Design Home Page</span>
+							<br/>
+						</section>
+					</div>
+				</div> <!-- end third row -->	
+				     
+           </div> <!-- End Main-Area div -->
+
             <div id="right-sidebar" class="col-sm-2">
                 <!-- Right sidebar -->
                 <table class="enhancedTable_type1">
@@ -53,7 +81,9 @@
             	</table>
             </div>
       </div>
-      <button id='getmenuoptionsBTN' onclick='Menus.getMainMenuOptions(<?php echo '"'.BASE_URLS['PHP_SCRIPTS'].'"' ?>)'>Setup main menu</button>
+      <div class="row">
+      	<button id='getmenuoptionsBTN' onclick='Menus.getMainMenuOptions(<?php echo '"'.BASE_URLS['PHP_SCRIPTS'].'"' ?>)'>Setup main menu</button>
+      </div>
     <script>
       // var jq = $.noConflict();
       // jq(document).ready(function(){

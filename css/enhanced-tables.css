@@ -1,1 +1,39 @@
-.enhancedTable_type1{box-shadow:3px 3px 3px gold;font-size:12pt}.enhancedTable_type1 td{background-color:tan;border:2px groove yellow;padding-left:5px;padding-right:5px}.enhancedTable_type1 th,.enhancedTable_type1 th:hover{background-color:yellowgreen;color:black;opacity:1}.enhancedTable_type1 tr:hover,.enhancedTable_type1 td:hover{background-color:LIGHTGREEN;color:red;font:Times;opacity:0.90;text-shadow:1px 1px skyblue}.enhancedTable_type2{box-shadow:3px 3px 3px lightgray;font-size:14pt}.enhancedTable_type2 td{background-color:cornsilk;border:2px groove yellow;padding-left:5px;padding-right:5px}.enhancedTable_type2 th,.enhancedTable_type2 th:hover{background-color:olive;color:black;opacity:1}.enhancedTable_type2 tr:hover,.enhancedTable_type2 td:hover{background-color:LIGHTBLUE;color:red;font:Times;opacity:0.90;text-shadow:1px 1px skyblue}
+.enhancedTable_type1 {
+  box-shadow: 3px 3px 3px gold;
+  font-size: 12pt; }
+  .enhancedTable_type1 td {
+    background-color: tan;
+    border: 2px groove yellow;
+    padding-left: 5px;
+    padding-right: 5px; }
+  .enhancedTable_type1 th, .enhancedTable_type1 th:hover {
+    background-color: yellowgreen;
+    color: black;
+    opacity: 1; }
+  .enhancedTable_type1 tr:hover, .enhancedTable_type1 td:hover {
+    background-color: LIGHTGREEN;
+    color: red;
+    font: Times;
+    opacity: 0.90;
+    text-shadow: 1px 1px skyblue; }
+
+.enhancedTable_type2 {
+  box-shadow: 3px 3px 3px lightgray;
+  font-size: 14pt; }
+  .enhancedTable_type2 td {
+    background-color: cornsilk;
+    border: 2px groove yellow;
+    padding-left: 5px;
+    padding-right: 5px; }
+  .enhancedTable_type2 th, .enhancedTable_type2 th:hover {
+    background-color: olive;
+    color: black;
+    opacity: 1; }
+  .enhancedTable_type2 tr:hover, .enhancedTable_type2 td:hover {
+    background-color: LIGHTBLUE;
+    color: red;
+    font: Times;
+    opacity: 0.90;
+    text-shadow: 1px 1px skyblue; }
+
+/*# sourceMappingURL=enhanced-tables.css.map */

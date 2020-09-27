@@ -53,5 +53,13 @@ a {
 }
 
 #left-sidebar {
+	background-color: rgb(230, 191, 173);
+}
+
+#right-sidebar {
 	background-color: lightblue;
+}
+
+#main-area {
+	background-color: rgb(230, 173, 230);
 }

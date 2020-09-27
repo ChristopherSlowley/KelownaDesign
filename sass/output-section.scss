@@ -7,15 +7,23 @@
 	box-sizing:border-box;
 	box-shadow: 2px 2px lightpink;
 	padding: 5px;
+	margin: 2px;
 
 	header {
 		background-color: lightcoral;
 		border-style: dotted;
 		border-color: pink;
-		font-size: 18pt;
+		font-size:x-large  ;
 		font-family:cursive;
 		margin: 4px;
 		text-align: center;
 		text-shadow: 1px 1px lightgray;
+	}
+
+	.subtitle {
+		font-style: italic;
+		font-weight: bold;
+		font-size: medium;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 	}
 }
