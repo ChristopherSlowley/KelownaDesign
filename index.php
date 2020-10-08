@@ -71,18 +71,22 @@
            </div> <!-- End Main-Area div -->
 
             <div id="right-sidebar" class="col-sm-2">
-                <!-- Right sidebar -->
-                <table class="enhancedTable_type1">
+              	<!-- Right sidebar -->
+               <table class="enhancedTable_type1">
             	<?php
+            		/*
                 	printf("<tr><td>Host Name</td><td>%s</td></tr>" , DB_SETTINGS['HOST_NAME']);
                 	printf("<tr><td>Database Name</td><td>%s</td></tr>" , DB_SETTINGS['DATABASE_NAME']);
                 	printf("<tr><td>Absolute Root Location</td><td>%s</td></tr>" , BASE_SETTINGS['ABSOLUTE_ROOT_LOCATION']);
+                	*/
             	?>
             	</table>
             </div>
       </div>
       <div class="row">
+      <!--	
       	<button id='getmenuoptionsBTN' onclick='Menus.getMainMenuOptions(<?php echo '"'.BASE_URLS['PHP_SCRIPTS'].'"' ?>)'>Setup main menu</button>
+      -->
       </div>
     <script>
       // var jq = $.noConflict();
