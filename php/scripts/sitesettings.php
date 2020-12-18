@@ -5,6 +5,7 @@
 * @date June 25, 2017
 * @updated September 19, 2020
 * @purpose Stores all the site settings
+* @copyright (c) 2020, Christopher Slowley
 */
 
 

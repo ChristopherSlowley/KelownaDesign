@@ -11,6 +11,7 @@
 
    <link type="text/css" href= <?php echo (BASE_URLS['CSS']."cssreset.css"); ?> rel="stylesheet">
    <link type="text/css" href= <?php echo (BASE_URLS['CSS']."layout-styles.css"); ?> rel="stylesheet">
+   <link type="text/css" href= <?php echo (BASE_URLS['CSS']."loginform.css"); ?> rel="stylesheet">
    <link type="text/css" href= <?php echo (BASE_URLS['CSS']."main-style.css"); ?> rel="stylesheet">
    <link type="text/css" href= <?php echo (BASE_URLS['CSS']."menus.css"); ?> rel="stylesheet">
    <link type="text/css" href= <?php echo (BASE_URLS['CSS']."enhanced-tables.css"); ?> rel="stylesheet">
@@ -20,6 +21,7 @@
    <script src= <?php echo (BASE_URLS['JS']."jquery-3.2.1.min.js");?> ></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script src= <?php echo (BASE_URLS['JS']."angular.min.js"); ?> ></script>
+   <script src= <?php echo (BASE_URLS['JS_SCRIPTS']."LoginUtil.js"); ?> ></script>
    <script src= <?php echo (BASE_URLS['JS_SCRIPTS']."GUIUtil.js"); ?> type="text/javascript"></script>
    <script src= <?php echo (BASE_URLS['JS_SCRIPTS']."getMenuOptions.js"); ?> type="text/javascript"></script>
 </head>

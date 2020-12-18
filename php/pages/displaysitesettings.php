@@ -1,5 +1,5 @@
 <?php
-  require_once $_SERVER['DOCUMENT_ROOT']."/websites/KelownaDesigns.com-April2017/public_html/"."basesettings.php";
+  require_once $_SERVER['DOCUMENT_ROOT']."/basesettings.php";
   require BASE_LOCATIONS['PHP_SEGMENTS']."page_header.php";
   require BASE_LOCATIONS['PHP_SEGMENTS']."menu_bar.php";
 ?>
@@ -17,7 +17,7 @@
                   printf("<p>Site's root : %s</p>" , BASE_SETTINGS['ABSOLUTE_ROOT_URL']);
                   printf("<p>Database Name: %s</p>" , DB_SETTINGS['DATABASE_NAME']);
                   printf("<p>Menu Options Table Name: %s</p>" , DB_SETTINGS['MENU_OPTIONS_TABLE_NAME']);
-						printf("Public Folder global: %s ", $GLOBALS["publicFolder"]."basesettings.php");               
+                printf("Public Folder global: %s ", $GLOBALS["publicFolder"]."basesettings.php");               
                ?>
          </div>
       </div>

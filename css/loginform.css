@@ -1,0 +1,14 @@
+/*
+*    Created on : Dec. 5, 2020, 4:36:08 p.m.
+*    Author     : christopher
+*/
+#login-form .container {
+  margin: 5px; }
+
+#login-form-div {
+  border: solid 2px #c6538c;
+  margin-left: 45px;
+  margin-right: 10px; }
+
+#login-form-div-response {
+  color: red; }

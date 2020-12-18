@@ -54,7 +54,7 @@
 				<div class="row">
 					<div class="col-sm-6 col-md-6 col-lg-6">
 						<section class="outputSection">
-							<header><a target="_blank" href="/JobHunter-Php/CreateNew_JobPosting.html">Job Hunter Project</a></header>
+							<header><a target="_blank" href="http://jobhunter-local.com/">Job Hunter Project</a></header>
 							<span class="subtitle">Track potential job contacts</span>
 							<br/>
 						</section>
@@ -83,11 +83,16 @@
             	</table>
             </div>
       </div>
+      <hr>
       <div class="row">
       <!--	
       	<button id='getmenuoptionsBTN' onclick='Menus.getMainMenuOptions(<?php echo '"'.BASE_URLS['PHP_SCRIPTS'].'"' ?>)'>Setup main menu</button>
       -->
+        <button onclick="LoginUtil.getLoginForm()">User login</button>
+        <div id="login-form-div"> </div>
+        <div id="login-form-div-response"></div>
       </div>
+      
     <script>
       // var jq = $.noConflict();
       // jq(document).ready(function(){

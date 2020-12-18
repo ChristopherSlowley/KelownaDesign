@@ -6,21 +6,20 @@
   box-sizing: border-box;
   box-shadow: 2px 2px lightpink;
   padding: 5px;
-  margin: 2px;
-}
-.outputSection header {
-  background-color: lightcoral;
-  border-style: dotted;
-  border-color: pink;
-  font-size: x-large;
-  font-family: cursive;
-  margin: 4px;
-  text-align: center;
-  text-shadow: 1px 1px lightgray;
-}
-.outputSection .subtitle {
-  font-style: italic;
-  font-weight: bold;
-  font-size: medium;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
+  margin: 2px; }
+  .outputSection header {
+    background-color: lightcoral;
+    border-style: dotted;
+    border-color: pink;
+    font-size: x-large;
+    font-family: cursive;
+    margin: 4px;
+    text-align: center;
+    text-shadow: 1px 1px lightgray; }
+  .outputSection .subtitle {
+    font-style: italic;
+    font-weight: bold;
+    font-size: medium;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
+
+/*# sourceMappingURL=output-section.css.map */
