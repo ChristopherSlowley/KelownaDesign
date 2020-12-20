@@ -17,23 +17,6 @@
 
 
     // ********************************* Public Methods ****************************
-    LoginUtil.getGeometrics = function(elementId) {
-        if( elementId ){
-
-         var theElement = document.getElementById(elementId);
-         if (theElement){
-            // geometrics is a DOMRect object with eight properties: left, top, right, bottom, x, y, width, height
-            var geometrics = theElement.getBoundingClientRect();
-            //  var geometrics2 = $("#"+mainMenuId)[0].getBoundingClientRect();
-            //  var geometrics3 = $("#"+mainMenuId).get(0).getBoundingClientRect();
-
-            geometrics.horizontalMid = findHorizontalMid(geometrics);
-            geometrics.verticalMid = findVerticalMid (geometrics);
-            return geometrics;
-         }
-      }
-      return null;
-   };
 
     LoginUtil.getLoginForm = function()
     {
@@ -61,7 +44,10 @@
             //alert("Success");
             formDiv.html("Welcome");
             $('#main-content-area').toggle();
-            return true;
+            $('#login-form-div').toggle();
+            $('#login-button').toggle();
+            
+            return true;    
         }
         else
         {
