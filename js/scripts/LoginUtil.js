@@ -14,7 +14,29 @@
     // ********************************* Public Properties ****************************
 
     // ********************************* Private Methods ****************************
-
+   /**
+    * Validates if the user name password combo are correct.
+    * @param {type} userName
+    * @param {type} password
+    * @returns {Boolean}
+    * 
+    * @author Christopher E. Slowley
+    */
+    function validateUser(userName, password)
+    {
+        var isValidUser = false;
+        alert("userName :"+ userName+ ", password: "+password);
+        
+        if(userName && password)
+        {
+            if(userName == 'admin@kelownadesigns.com' && password == 'abc')
+            {
+                isValidUser = true;
+            }
+        }
+        
+        return isValidUser;
+    }
 
     // ********************************* Public Methods ****************************
 
@@ -42,8 +64,8 @@
         var password = $('#password');
         var formResponse = $('#login-form-div-response'); 
         var formDiv = $('#login-form-div');
-
-        if(password.val() == "abc")
+        
+        if(validateUser(email.val(),password.val()))
         {
             formResponse.html("Success").show().hide(2000);
             formDiv.html("Welcome");
@@ -59,5 +81,7 @@
             return false;
         }
     }
+    
+    
 
 }( window.LoginUtil = window.LoginUtil || {}, jQuery ));
