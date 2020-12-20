@@ -7,7 +7,7 @@
   	<div class="row">
 		<h1>Kelowna Designs</h1>
   	</div>
-      <div class="row">
+      <div class="row" id="main-content-area">
           <div id="left-sidebar" class="col-sm-2">
             <!-- Left side bar-->  
           </div>

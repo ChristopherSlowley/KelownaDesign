@@ -47,9 +47,13 @@ a {
 }
 
 .importantNumber {
-	color: RED;	
-	font-family: monospace;
-	font-style: italic;
+    color: RED;	
+    font-family: monospace;
+    font-style: italic;
+}
+
+#main-content-area {
+    display: none;
 }
 
 #left-sidebar {

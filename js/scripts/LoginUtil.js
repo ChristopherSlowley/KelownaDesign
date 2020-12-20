@@ -60,6 +60,7 @@
             formResponse.html("Success").show().hide(2000);
             //alert("Success");
             formDiv.html("Welcome");
+            $('#main-content-area').toggle();
             return true;
         }
         else
