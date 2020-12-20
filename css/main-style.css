@@ -53,7 +53,7 @@ a {
 }
 
 #main-content-area {
-    display: none;
+    display: inline-flex;
 }
 
 #left-sidebar {
@@ -66,4 +66,5 @@ a {
 
 #main-area {
 	background-color: rgb(230, 173, 230);
+/*        display: none;*/
 }

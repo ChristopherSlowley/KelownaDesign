@@ -31,6 +31,11 @@
         });
     }
 
+    /**
+     * 
+     * @returns {Boolean}
+     * @author Christopher E. Slowley
+     */
     LoginUtil.processLoginForm = function()
     {
         var email = $('#email');
@@ -41,9 +46,8 @@
         if(password.val() == "abc")
         {
             formResponse.html("Success").show().hide(2000);
-            //alert("Success");
             formDiv.html("Welcome");
-            $('#main-content-area').toggle();
+            GUIUtil.updateView($('#main-area'),"html/views/view-client-sites.html");
             $('#login-form-div').toggle();
             $('#login-button').toggle();
             
@@ -52,8 +56,7 @@
         else
         {
             formResponse.html("Fail").show().hide(2000);
-           return false;
-           //alert("Fail");
+            return false;
         }
     }
 
