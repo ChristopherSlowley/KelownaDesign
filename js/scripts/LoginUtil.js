@@ -25,17 +25,33 @@
     function validateUser(userName, password)
     {
         var isValidUser = false;
+        var accountType = 'user';
         alert("userName :"+ userName+ ", password: "+password);
         
         if(userName && password)
         {
-            if(userName == 'admin@kelownadesigns.com' && password == 'abc')
+            if(userName == 'admin@kelownadesigns.com' && password == 'admin')
             {
                 isValidUser = true;
+                accountType = 'admin';
             }
+            
+            if(userName == 'christopher@kelownadesigns.com' && password == '123')
+            {
+                isValidUser = true;
+                accountType = 'user';
+            }
+
+            if(userName == 'guest@kelownadesigns.com' && password == '123')
+            {
+                isValidUser = true;
+                accountType = 'guest';
+            }
+            
         }
         
-        return isValidUser;
+        var result = {isValid:isValidUser, accountType:accountType};
+        return result;
     }
 
     // ********************************* Public Methods ****************************
@@ -65,11 +81,32 @@
         var formResponse = $('#login-form-div-response'); 
         var formDiv = $('#login-form-div');
         
-        if(validateUser(email.val(),password.val()))
+        var accountResult = validateUser(email.val(),password.val());
+        //alert("accountResult:" + JSON.stringify(accountResult,null,4));
+        if(accountResult.isValid)
         {
+            var view= "html/views/view-normal-landing.html";
             formResponse.html("Success").show().hide(2000);
             formDiv.html("Welcome");
-            GUIUtil.updateView($('#main-area'),"html/views/view-client-sites.html");
+            
+            switch(accountResult.accountType)
+            {
+                case 'admin':
+                    view = "html/views/view-client-sites.html";
+                break;
+                
+                case 'user':
+                    view = "html/views/view-normal-landing.html";
+                break;
+                
+                case 'guest':
+                    view = "html/views/view-guest-landing.html";
+                break;
+                
+                default :
+            }
+
+            GUIUtil.updateView($('#main-area'),view);
             $('#login-form-div').toggle();
             $('#login-button').toggle();
             
