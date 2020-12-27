@@ -36,7 +36,7 @@
       	<button id='getmenuoptionsBTN' onclick='Menus.getMainMenuOptions(<?php echo '"'.BASE_URLS['PHP_SCRIPTS'].'"' ?>)'>Setup main menu</button>
       -->
         <button onclick="LoginUtil.getLoginForm()" id="login-button">User login</button>
-        <div id="login-form-div"> </div>
+        <div id="login-form-div"></div>
         <div id="login-form-div-response"></div>
       </div>
       

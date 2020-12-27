@@ -76,49 +76,47 @@
      */
     LoginUtil.processLoginForm = function()
     {
-        var email = $('#email');
-        var password = $('#password');
-        var formResponse = $('#login-form-div-response'); 
-        var formDiv = $('#login-form-div');
+        var _email = $('#email');
+        var _password = $('#password');
+        var _formResponse = $('#login-form-div-response'); 
+        var _formDiv = $('#login-form-div');
+        var loginViewsPath  = "html/views/landing/";
         
-        var accountResult = validateUser(email.val(),password.val());
+        var accountResult = validateUser(_email.val(),_password.val());
         //alert("accountResult:" + JSON.stringify(accountResult,null,4));
         if(accountResult.isValid)
         {
-            var view= "html/views/view-normal-landing.html";
-            formResponse.html("Success").show().hide(2000);
-            formDiv.html("Welcome");
+            var view = loginViewsPath+"view-normal-landing.html";
+            _formResponse.html("Success").show().hide(2000);
+            _formDiv.html("Welcome");
             
             switch(accountResult.accountType)
             {
                 case 'admin':
-                    view = "html/views/view-client-sites.html";
+                    view = loginViewsPath+"view-client-sites.html";
                 break;
                 
                 case 'user':
-                    view = "html/views/view-normal-landing.html";
+                    view = loginViewsPath+"view-normal-landing.html";
                 break;
                 
                 case 'guest':
-                    view = "html/views/view-guest-landing.html";
+                    view = loginViewsPath+"view-guest-landing.html";
                 break;
                 
                 default :
             }
 
             GUIUtil.updateView($('#main-area'),view);
-            $('#login-form-div').toggle();
+            _formDiv.toggle();
             $('#login-button').toggle();
-            
             return true;    
         }
         else
         {
-            formResponse.html("Fail").show().hide(2000);
+            _formResponse.html("Fail").show().hide(4000);
             return false;
         }
     }
-    
-    
 
 }( window.LoginUtil = window.LoginUtil || {}, jQuery ));

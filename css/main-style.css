@@ -68,3 +68,7 @@ a {
 	background-color: rgb(230, 173, 230);
 /*        display: none;*/
 }
+
+.center-me {
+  margin: 0 auto;
+}

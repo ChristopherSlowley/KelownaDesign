@@ -13,75 +13,87 @@
  * Public functions 
  */
 
-  Menus.getMainMenuOptions = function( path ) {
-    phpScriptPath = path + 'get_menu_options.php';  
-    $.get(phpScriptPath,{menuLevel:0,parentMenuId:0},function(jsonObjStr){
+    Menus.getMainMenuOptions = function( path ) 
+    {
+        var $mainMenuDIV = $("#mainmenubar");
+        var data = {menuLevel:0,parentMenuId:0};
 
-      var $mainMenuDIV = $("#mainmenubar");
+        phpScriptPath = path + 'get_menu_options.php';  
 
-   	if (jsonObjStr.includes("Error")) 
-   	{
-        	$mainMenuDIV.append("<span id='mainmenu>"+ jsonObjStr +"</span>");
-			    alert("Error found " + jsonObjStr); //TODO: debugging
-   	}
-		else
-   	{
-      	var jsonObj = JSON.parse(jsonObjStr);
-      	var menuOptionsArray = jsonObj.menuOptions;
-      	var optionsCount = menuOptionsArray.length;
-      
-      	for(var idx = 0; idx < menuOptionsArray.length - 1; idx++)
-      	{
-        		var theLink =    menuOptionsArray[idx].menuLink;
-        		var menuId =     menuOptionsArray[idx].menuId;
-        		var hasSubMenu = menuOptionsArray[idx].hasSubMenu;
-        		//TODO: CES put code (that Rob showed you to limit the number of times a\a javascript event is called)
-        		//TODO: to prevent the item frombeing added to the memu more than once
-         	  //TODO: Also there is a problem with the submenu option getting mixed up wiht each other's options
-          	//TODO: need to findout what  is causing that to happen.
-        		$mainMenuDIV.append("<span id='mainmenu"+ menuId +"' onmouseover='Menus.getSubmenuFor(" + menuId + "," + hasSubMenu + ")'><a href='"+ theLink + "' >" + menuOptionsArray[idx].menuName + "</a></span>");
-      	}
-   	}
-	  });
-  }
+        $.get(phpScriptPath,data,function(jsonObjStr){
+            if (jsonObjStr.includes("Error")) 
+            {
+                $mainMenuDIV.append("<span id='mainmenu>"+ jsonObjStr +"</span>");
+                console.log("Error found " + jsonObjStr); //TODO: debugging
+            }
+            else
+            {
+                var jsonObj = JSON.parse(jsonObjStr);
+                var menuOptionsArray = jsonObj.menuOptions;
+                var optionsCount = menuOptionsArray.length;
 
+                for(var idx = 0; idx < optionsCount - 1; idx++)
+                {
+                    var theLink =    menuOptionsArray[idx].menuLink;
+                    var menuId =     menuOptionsArray[idx].menuId;
+                    var hasSubMenu = menuOptionsArray[idx].hasSubMenu;
 
-  Menus.getSubmenuFor = function( theParentMenuId, hasSubMenu ) {
-    var $subMenuDIV = $("#submenubarlevel1");
-    var $subMenuArea = $(".menuoptionsarea");
+                    //TODO:CES>> Put code (that Rob showed you to limit the number 
+                    //of times a\a javascript event is called)
+                    //to prevent the item from being added to the memu more than once
+                    //Also there is a problem with the submenu option getting mixed
+                    //up wiht each other's options need to findout what  is causing
+                    //that to happen.
 
-    $subMenuDIV.html("");
-    $subMenuArea.html("");
+                    $mainMenuDIV.append("<span id='mainmenu"+ menuId 
+                            +"' onmouseover='Menus.getSubmenuFor(" + menuId + "," 
+                            + hasSubMenu + ")'><a href='"+ theLink + "' >" 
+                            + menuOptionsArray[idx].menuName + "</a></span>");
+                }
+            }
+        });
+    }
 
-    if(hasSubMenu){
-      $.get(phpScriptPath,{menuLevel:1,parentMenuId:theParentMenuId},function(jsonObjStr){
-        var jsonObj = JSON.parse(jsonObjStr);
-        var menuOptionsArray = jsonObj.menuOptions;
-        var optionsCount = menuOptionsArray.length;
-        var mainMenuId = "mainmenu"+theParentMenuId;
-        var geometrics = GUIUtil.getGeometrics(mainMenuId);
+    
+    Menus.getSubmenuFor = function( theParentMenuId, hasSubMenu ) {
+        var $subMenuDIV = $("#submenubarlevel1");
+        var $subMenuArea = $(".menuoptionsarea");
 
-         //TODO: convert this function into a recursive one so the here can be different levels of menus.
-         //      have to pass the level as input to the function adding one to each level when called
-         //Need to fine tune the Main menu item span size and positioning so that the submenus can line up properly.
-         $subMenuArea.css({
-            "left":(geometrics.left),
-            "top":(geometrics.bottom)
-         });
+        $subMenuDIV.html("");
+        $subMenuArea.html("");
 
-        for(var idx = 0; idx < menuOptionsArray.length - 1; idx++)
-         {
-            var theLink =    menuOptionsArray[idx].menuLink;
-            var menuId =     menuOptionsArray[idx].menuId;
-            var hasSubMenu = menuOptionsArray[idx].hasSubMenu;
-         // $subMenuArea.append("<tr><td class='menuoption' onmouseover='getSubmenuFor(" + menuId + "," + hasSubMenu + ")'><a href='"+ theLink + "' >" + menuOptionsArray[idx].menuName + "</a></td></tr>");
-            $subMenuArea.append("<tr><td class='menuoption' onmouseover=''><a href='"+ theLink + "' >" + menuOptionsArray[idx].menuName + "</a></td></tr>");
-         }
-         $subMenuDIV.show(500);
-         $subMenuArea.show();
-      });
-   }
-}
+        if(hasSubMenu){
+            $.get(phpScriptPath,{menuLevel:1,parentMenuId:theParentMenuId},function(jsonObjStr){
+                var jsonObj = JSON.parse(jsonObjStr);
+                var menuOptionsArray = jsonObj.menuOptions;
+                var optionsCount = menuOptionsArray.length;
+                var mainMenuId = "mainmenu"+theParentMenuId;
+                var geometrics = GUIUtil.getGeometrics(mainMenuId);
+
+                 //TODO:Convert this function into a recursive one so the here 
+                 //     can be different levels of menus. Have to pass the level
+                 //     as input to the function adding one to each level when
+                 //     called. 
+                 //     Need to fine-tune the Main menu item span size and 
+                 //     positioning so that the submenus can line up properly.
+                 $subMenuArea.css({
+                    "left":(geometrics.left),
+                    "top":(geometrics.bottom)
+                 });
+
+                for(var idx = 0; idx < optionsCount - 1; idx++)
+                {
+                    var theLink =    menuOptionsArray[idx].menuLink;
+                    var menuId =     menuOptionsArray[idx].menuId;
+                    var hasSubMenu = menuOptionsArray[idx].hasSubMenu;
+                 // $subMenuArea.append("<tr><td class='menuoption' onmouseover='getSubmenuFor(" + menuId + "," + hasSubMenu + ")'><a href='"+ theLink + "' >" + menuOptionsArray[idx].menuName + "</a></td></tr>");
+                    $subMenuArea.append("<tr><td class='menuoption' onmouseover=''><a href='"+ theLink + "' >" + menuOptionsArray[idx].menuName + "</a></td></tr>");
+                }
+                $subMenuDIV.show(500);
+                $subMenuArea.show();
+            });
+        }
+    }
 
 /**
 * Private functions
