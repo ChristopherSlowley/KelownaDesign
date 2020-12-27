@@ -171,5 +171,4 @@ function createPopupMenu(menuOptionsObjArray, xPos, yPos, menuId, menuTitle) {
 
     return $menuArea;
 }
-
 }( window.Menus = window.Menus || {}, jQuery ));

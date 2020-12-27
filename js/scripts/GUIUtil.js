@@ -113,6 +113,4 @@
    function findVerticalMid ( geometrics ) {
       return geometrics.top + geometrics.height/2;
    }
-
-
 }( window.GUIUtil = window.GUIUtil || {}, jQuery ));
