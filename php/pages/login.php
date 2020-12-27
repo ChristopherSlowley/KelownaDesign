@@ -8,7 +8,8 @@
     <form action="" id="login-form">
         <input type="text" placeholder="Enter email" name="email" />
     </form>
+</body>
+
 <?php
   require BASE_LOCATIONS['PHP_SEGMENTS']."page_footer.php";
 ?>
-</body>
