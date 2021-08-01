@@ -15,6 +15,7 @@ define("DB_SETTINGS", [
     "PASSWORD" => "chrisisroot",
     "DATABASE_NAME" => "kelownadesignsdb",
     "MENU_OPTIONS_TABLE_NAME" => "menuoptions",
+    "USERS_TABLE_NAME" => "users",
     "CATALOGCATEGORIES_TABLE_NAME" => "catalogcategories",
     "CATALOGITEMS_TABLE_NAME" => "catalogitems",
     "CATALOGIINVENTORY_TABLE_NAME" => "cataloginventory",
