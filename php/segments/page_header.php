@@ -24,6 +24,8 @@
    <script src= <?php echo (BASE_URLS['JS']."angular.min.js"); ?> ></script>
    <script src= <?php echo (BASE_URLS['JS_SCRIPTS']."LoginUtil.js"); ?> ></script>
    <script src= <?php echo (BASE_URLS['JS_SCRIPTS']."GUIUtil.js"); ?> type="text/javascript"></script>
+   <script src= <?php echo (BASE_URLS['JS_SCRIPTS']."AdminController.js"); ?> type="text/javascript"></script>
+   <script src= <?php echo (BASE_URLS['JS_SCRIPTS']."AjaxUtil.js"); ?> type="text/javascript"></script>
    <script src= <?php echo (BASE_URLS['JS_SCRIPTS']."getMenuOptions.js"); ?> type="text/javascript"></script>
 </head>
 

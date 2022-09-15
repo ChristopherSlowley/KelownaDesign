@@ -41,6 +41,7 @@ class UserDataHandler extends DBConnection
     /**
      * Method that returns all the users in the users DB Table
      * @return array
+     * @author Christopher E. Slowley
      */
     public function getAllUsers()
     {
@@ -48,5 +49,32 @@ class UserDataHandler extends DBConnection
         $results = $this->runQuery($query);
                
         return $results->fetchAll();
+    }
+    
+    /**
+     * Deletes a user record from the user's table
+     * @param type $userId
+     * @author Christopher E. Slowley
+     */
+    public function deleteUser($userId)
+    {
+        if(!empty($userId))
+        {
+            $query = "DELETE FROM ".self::$userTblName." WHERE id = ".$userId;
+            $results = $this->runQuery($query);
+        }
+    }
+    
+    public function editUser($userId, $data)
+    {
+        $query = "UPDATE ".self::$userTblName;
+        
+        
+    }
+    
+    public function addUser ($data)
+    {
+        $query = "INSERT INTO ".self::$userTblName;
+        
     }
 }

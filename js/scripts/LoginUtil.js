@@ -52,7 +52,8 @@
             async:false, 
             data: { 
                     'function':'getUserByEmail',
-                    'data': {'user_email':userName}
+                    'data': {'user_email':userName,
+                            'source':'login'}
             },
             success: function(phpResult){
                 alert("phpResult: "+phpResult);

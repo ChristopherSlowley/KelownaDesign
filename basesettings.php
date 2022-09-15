@@ -28,7 +28,7 @@ define("BASE_URLS", [
     "CSS" =>  BASE_SETTINGS['ABSOLUTE_ROOT_URL']."css/",
     "JS" => BASE_SETTINGS['ABSOLUTE_ROOT_URL']."js/",
     "JS_SCRIPTS" => BASE_SETTINGS['ABSOLUTE_ROOT_URL']."js/scripts/",
-    "PHP_SCRIPTS" => BASE_SETTINGS[ABSOLUTE_ROOT_URL]."php/scripts/"
+    "PHP_SCRIPTS" => BASE_SETTINGS['ABSOLUTE_ROOT_URL']."php/scripts/"
 ]);
 
 define("BASE_LOCATIONS", [

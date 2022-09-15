@@ -3,3 +3,15 @@
 
 #Visual Studio Code files
 /.vscode/*
+
+.fuse_hidden*
+
+#Old file versions
+*_OLD
+*_OLd*
+
+# Swap files
+*.swp
+
+#netbean project files
+/nbproject/*

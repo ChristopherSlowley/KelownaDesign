@@ -9,5 +9,4 @@
     $menuHandler = new MenuDataHandler();
     
     echo $menuHandler->getMenuOptions($menuLevel, $parentMenuId);
-
 ?>

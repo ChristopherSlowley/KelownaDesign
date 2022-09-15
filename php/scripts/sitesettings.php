@@ -8,10 +8,10 @@
 * @copyright (c) 2020, Christopher Slowley
 */
 
-
 define("DB_SETTINGS", [
     "HOST_NAME" => "localhost",
-    "USER_NAME" => "kdesignsadmin",
+  //  "USER_NAME" => "kdesignsadmin",
+    "USER_NAME" => "root",
     "PASSWORD" => "chrisisroot",
     "DATABASE_NAME" => "kelownadesignsdb",
     "MENU_OPTIONS_TABLE_NAME" => "menuoptions",
