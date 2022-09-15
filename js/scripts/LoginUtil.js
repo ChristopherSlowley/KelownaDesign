@@ -26,32 +26,43 @@
     {
         var isValidUser = false;
         var accountType = 'user';
-        alert("userName :"+ userName+ ", password: "+password);
-        
-        if(userName && password)
-        {
-            if(userName == 'admin@kelownadesigns.com' && password == 'admin')
-            {
-                isValidUser = true;
-                accountType = 'admin';
+               
+        if(userName && password) {
+            var userInfo = getUserInfo(userName);
+            if(typeof userInfo !== 'undefined') {          
+                alert("userInfo obj: "+ JSON.stringify(userInfo,null,4));
+                if( password === userInfo.user_password) {
+                    isValidUser = true;
+                    accountType = userInfo.user_type;
+                }
             }
-            
-            if(userName == 'christopher@kelownadesigns.com' && password == '123')
-            {
-                isValidUser = true;
-                accountType = 'user';
-            }
-
-            if(userName == 'guest@kelownadesigns.com' && password == '123')
-            {
-                isValidUser = true;
-                accountType = 'guest';
-            }
-            
         }
         
         var result = {isValid:isValidUser, accountType:accountType};
         return result;
+    }
+    
+    function getUserInfo(userName)
+    {
+        var userData;
+        $.ajax({
+            type: "POST",
+            //url: "php/scripts/data/TestFile.html",
+            url: "php/scripts/get_user_information.php",
+            async:false, 
+            data: { 
+                    'function':'getUserByEmail',
+                    'data': {'user_email':userName}
+            },
+            success: function(phpResult){
+                alert("phpResult: "+phpResult);
+                userData = (JSON.parse(phpResult))[0];
+            },
+            fail: function(){
+                alert('Failed to getUserInformation from the backend');
+            }
+        }); 
+        return userData;
     }
 
     // ********************************* Public Methods ****************************
@@ -87,7 +98,7 @@
         if(accountResult.isValid)
         {
             var view = loginViewsPath+"view-normal-landing.html";
-            _formResponse.html("Success").show().hide(2000);
+            _formResponse.html("<h2>Success</h2>").show().hide(2000);
             _formDiv.html("Welcome");
             
             switch(accountResult.accountType)
@@ -114,7 +125,14 @@
         }
         else
         {
-            _formResponse.html("Fail").show().hide(4000);
+            bootbox.alert("Failed to login!");
+            bootbox.alert({
+                message: "This is an alert with a callback!",
+                callback: function () {
+                    console.log('This was logged in the callback!');
+                }
+            });
+            _formResponse.html("<h2>Fail</h2>").show().hide(4000);
             return false;
         }
     }

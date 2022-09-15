@@ -8,11 +8,11 @@ require_once "../scripts/sitesettings.php";
 */
 
 class DBConnection {
-    private $url        =   DB_SETTINGS['HOST_NAME'];
-    private $username   =   DB_SETTINGS['USER_NAME'];
-    private $password   =   DB_SETTINGS['PASSWORD'];
-    private $database   =   DB_SETTINGS['DATABASE_NAME'];
-    private $databaseHandle;
+    private     $url        =   DB_SETTINGS['HOST_NAME'];
+    private     $username   =   DB_SETTINGS['USER_NAME'];
+    private     $password   =   DB_SETTINGS['PASSWORD'];
+    private     $database   =   DB_SETTINGS['DATABASE_NAME'];
+    protected   $databaseHandle;
 
     public function __construct($dbName)
     {
@@ -49,7 +49,7 @@ class DBConnection {
         $this->databaseHandle = null;
     }
 
-    private function setupConnection()
+    public function setupConnection()
     {
         try 
         {

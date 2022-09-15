@@ -20,8 +20,11 @@
 
    <script src= <?php echo (BASE_URLS['JS']."jquery-3.2.1.min.js");?> ></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
    <script src= <?php echo (BASE_URLS['JS']."angular.min.js"); ?> ></script>
    <script src= <?php echo (BASE_URLS['JS_SCRIPTS']."LoginUtil.js"); ?> ></script>
    <script src= <?php echo (BASE_URLS['JS_SCRIPTS']."GUIUtil.js"); ?> type="text/javascript"></script>
    <script src= <?php echo (BASE_URLS['JS_SCRIPTS']."getMenuOptions.js"); ?> type="text/javascript"></script>
 </head>
+
+
